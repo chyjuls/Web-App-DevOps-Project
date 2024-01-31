@@ -13,7 +13,7 @@ steps:
 - task: Docker@2
   displayName: 'Build and Push Docker Image'
   inputs:
-    containerRegistry: 'azure DevOps web-app project'
+    containerRegistry: 'Docker Hub'
     repository: 'chyjuls/web-delivery'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
@@ -28,3 +28,4 @@ steps:
       azureResourceGroup: 'networking-resource-group'
       kubernetesCluster: 'terraform-aks-cluster'
       manifests: 'application-manifest.yaml'
+
