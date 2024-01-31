@@ -329,6 +329,49 @@ Azure Log Analytics is used  to parse and analyze logs from the AKS cluster. Key
 **Response Strategy**: Check for memory-intensive applications, consider scaling or optimizing pod configurations.
 
 
+# AKS Integration with Azure Key Vault
+
+This section outlines the integration process between Azure Kubernetes Service (AKS) and Azure Key Vault, aimed at enhancing the security and management of sensitive application configurations such as secrets, keys, and certificates.
+
+## Azure Key Vault Setup and Permissions
+
+Azure Key Vault is utilised to securely store and manage sensitive information such as passwords, database connection strings, and API keys.
+
+### Setup
+
+**Key Vault Creation**: A Key Vault instance was provisioned in Azure, ensuring geographic proximity to the AKS cluster for optimized performance.
+**Secrets Storage**: Critical application secrets, including database connection strings and external API keys, were stored in the Key Vault.  
+
+
+### Assigned Permissions  
+To ensure secure and efficient management, the Key Vault Administrator role was assigned to responsible personnel, enabling them to manage vault access policies and secrets. A Managed Identity for the AKS cluster was created and assigned the Key Vault Secrets User role, granting it permission to read secrets as needed by the application.
+
+### Application Secrets in Key Vault
+
+Each secret stored within the Key Vault is critical for application functionality:
+
+**Database Connection String**: Enables secure database access without hardcoding sensitive details in the application code.  
+
+**API Keys**: Used for authentication when integrating with external services, ensuring that each service can be securely accessed.  
+
+### AKS Integration with Key Vault 
+
+Integration between AKS and Key Vault was achieved through the following steps:
+
+**Managed Identity for AKS**
+A Managed Identity was created for the AKS cluster, providing an Azure AD identity that the cluster uses to interact with Azure services.  
+
+The Managed Identity was granted the Key Vault Secrets User role on the Key Vault, ensuring it has read access to the necessary secrets.
+
+**Application Code Modifications**   
+The application code was modified to leverage the Managed Identity for secure secret retrieval:
+**SDK Integration**: The Azure SDK was integrated into the application, allowing it to authenticate using the Managed Identity.
+**Secret Retrieval**: Code changes were made to fetch database connection strings and other configurations directly from Key Vault at runtime.
+Architecture Overview
+
+
+
+
 
 
 ## Contributors 
