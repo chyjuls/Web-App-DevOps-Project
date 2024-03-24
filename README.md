@@ -68,6 +68,13 @@ To run the application, you simply need to run the `app.py` script in this repos
 
 ![](https://github.com/chyjuls/Web-App-DevOps-Project/blob/fde7a76d4d1968ea171987e49ecc5495a8941495/DevOps%20Pipeline%20Architecture.png)
 
+
+
+## Docker:
+
+Details are within the dockerfile, docker image is built using   
+
+``` Docker build ```
    
 
 ## Terraform Project Documentation
@@ -84,6 +91,14 @@ Providers: Plugins that interact with APIs of cloud providers, services, or othe
 Resources: Components of your infrastructure such as virtual networks, compute instances, or higher-level components like DNS records.
 Modules: Reusable, encapsulated Terraform configurations for creating sets of resources that are used together.
 State: Terraform records information about what infrastructure is created in a state file, allowing for consistent management of resources.
+
+ **Modules**
+ 
+ - networking-module:provisions infrastructure for an Azure Kubernetes Service (AKS) cluster, typically contains Terraform configuration files that define and manage the necessary networking resources within Azure. These resources are essential for the AKS cluster to function correctly and securely within the Azure cloud environment. The resources include azure Vnet, subnets, route table etc.
+   
+ - aks-cluster-module: defines and manages an Azure Kubernetes Service (AKS) cluster. This module encapsulates all the configurations needed to set up the AKS cluster in a way that aligns with best practices, desired customisations, and the specific requirements of the application or environment. It contains the ask-cluster resource, node pools, service principal and managed identies, etc.
+ 
+
 
 Terraform Workflow
 
