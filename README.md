@@ -364,7 +364,7 @@ Architecture Overview
 ## Contributors 
 
 - [Maya Iuga]([https://github.com/yourusername](https://github.com/maya-a-iuga))
-- C.Ugorji (AI core DevOps Student)
+- C.Ugorji
 
 ## License
 
