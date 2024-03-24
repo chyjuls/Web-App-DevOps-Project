@@ -77,7 +77,7 @@ Details are within the dockerfile, docker image is built using
 ``` Docker build ```
    
 
-## Terraform Project Documentation
+## Terraform 
 
 **Overview**  
 
@@ -182,7 +182,7 @@ Namespace Registration: Addressed errors related to the subscription not being r
 Conclusion
 The project demonstrates the power of Infrastructure as Code (IaC) using Terraform, showcasing how complex infrastructure can be provisioned, managed, and troubleshooted systematically.
 
-# Kubernetes Deployment Documentation  
+# Kubernetes Deployment   
 
 ### Deployment and Service Manifests
 
@@ -209,8 +209,8 @@ Rollback Capabilities: Allows for easy rollback to the previous version if issue
 Testing and Validation
 Post-deployment, we conducted several tests to ensure the application's functionality and reliability:
 
-**Connectivity Test**: Verified that the application's pods are accessible and running as expected using kubectl get pods.
-**Functionality Test**: Used port forwarding (kubectl port-forward) to temporarily access the application and test its core functionalities, including the orders table and Add Order feature.  
+**Connectivity Test**: Verified that the application's pods are accessible and running as expected using ```sh kubectl get pods```.
+**Functionality Test**: Used port forwarding (```kubectl port-forward```) to temporarily access the application and test its core functionalities, including the orders table and Add Order feature.  
 
 ### Internal and External Access  
 
