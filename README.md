@@ -1,6 +1,16 @@
 # Web-App-DevOps-Project
 
-Welcome to the Web App DevOps Project repo! This application allows you to efficiently manage and track orders for a potential business. It provides an intuitive user interface for viewing existing orders and adding new ones. This is the finally project for AI core students who are on the DevOps pathway.Although the repo is forked, files have been replaced with my personal project files.
+Welcome to the Web App DevOps Project repo! This application allows you to efficiently manage and track orders for a potential business. It provides an intuitive user interface for viewing existing orders and adding new ones. The technolgies used to deploy this application include the follwoing:
+
+- Azure Cloud
+- Azure devOps
+- Python 3.8
+- Flask
+- Docker
+- Kubernetes
+- Terraform
+- Visual studio code
+  
 
 ## Table of Contents
 
@@ -69,8 +79,12 @@ Providers: Plugins that interact with APIs of cloud providers, services, or othe
 Resources: Components of your infrastructure such as virtual networks, compute instances, or higher-level components like DNS records.
 Modules: Reusable, encapsulated Terraform configurations for creating sets of resources that are used together.
 State: Terraform records information about what infrastructure is created in a state file, allowing for consistent management of resources.
+
 Terraform Workflow
+
 Initialize:
+
+``` Terraform init ```
 
 Run terraform init in your project directory.
 This command sets up Terraform's working directory, downloads providers, and prepares the backend for state storage.
