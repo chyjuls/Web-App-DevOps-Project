@@ -63,6 +63,15 @@ To run the application, you simply need to run the `app.py` script in this repos
 
 - **Database:** The application employs an Azure SQL Database as its database system to store order-related data.
 
+### Infrastructure Architecture
+
+
+
+
+
+
+
+
    
 
 ## Terraform Project Documentation
@@ -86,31 +95,23 @@ Initialize:
 
 ``` Terraform init ```
 
-Run terraform init in your project directory.
 This command sets up Terraform's working directory, downloads providers, and prepares the backend for state storage.
 Writing Configuration:
 
 Define your infrastructure in configuration files (.tf).
 Resources, variables, outputs, and provider configurations are declared here.
-Planning:
 
+Planning:
 Execute terraform plan.
+``` Terrsform plan ```
 Terraform reads configuration files and creates an execution plan, detailing what actions it will perform to reach the desired state.
 Applying:
 
-Run terraform apply.
+```terraform apply```
+
 Terraform will execute the plan to create, update, or delete resources as per the configuration.
-Maintaining State:
 
-Terraform maintains a state file to map resources to the configuration and keep track of metadata.
-The state file is critical for Terraform to function correctly and should be handled with care.
-Modifying Infrastructure:
-
-Update configuration files as needed.
-Rerun terraform plan and terraform apply to implement changes.
-Destroying Infrastructure:
-
-To remove all resources managed by Terraform, use terraform destroy.
+To remove all resources managed by Terraform, use  ``` Terraform destroy```.
 
 **Best Practices**  
 
@@ -201,11 +202,6 @@ Permission Issues for Resource Group Creation: Faced AuthorizationFailed errors 
 
 Namespace Registration: Addressed errors related to the subscription not being registered to use certain Azure services (namespaces).
 
-**Commands Used**  
-
-terraform init: To initialize the Terraform environment.
-terraform plan: To preview the changes before applying.
-terraform apply: To apply the changes and provision the infrastructure.
 Conclusion
 The project demonstrates the power of Infrastructure as Code (IaC) using Terraform, showcasing how complex infrastructure can be provisioned, managed, and troubleshooted systematically.
 
