@@ -66,7 +66,6 @@ To run the application, you simply need to run the `app.py` script in this repos
 ### Infrastructure Architecture
 
 
-!https://github.com/chyjuls/Web-App-DevOps-Project/blob/main/DevOps%20Pipeline%20Architecture.png
 
 
 
